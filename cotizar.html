@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web_Comunidad_Universitari_Ingenieria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estil_cot.css">
+    <script src="script_cot.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesone/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <div class="red-bar"></div>
+    <header>
+        <div class="logo-container">
+            <div class="logo-text">
+                <h1>COMUNIDAD UNIVERSITARIA</h1>
+                <h2>RED - UNI</h2>
+                <p>INGENIEROS Y ARQUITECTOS</p>
+            </div>
+        </div>
+        
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar" class="fa fa-bars"></label>
+       
+        <nav class="navbar">
+            <a href="index.html">Inversiones</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="cursos.html">Cursos</a>
+            
+            <!-- Menú desplegable para Tesis -->
+        <div class="dropdown">
+          <input type="checkbox" id="tesis-submenu">
+          <label for="tesis-submenu" class="dropbtn">Tesis <i class="fa fa-caret-down"></i></label>
+          <div class="dropdown-content">
+            <a href="tesis_tema.html">Tema de investigacion</a>
+            <a href="tesis_plant.html">Planteamiento del problema</a>
+            <a href="#">Metodologia</a>
+          </div>
+      </div>
+
+            <a href="#normas">Normas</a>
+            <a href="comentarios.html">Comentarios</a>
+            <a href="#contact">Productos</a>
+        </nav>
+    </header>
+    <div class="red-bar1"></div>
+
+
+    
+
+    <div class="card-body">
+        <h1>Cotizador</h1>
+        <span class="subtitle">
+            El cotizador es una simulación, para una cotización más precisa, no dudes en <a
+                href="contacto.php"><strong>contactarnos</strong></a>
+                <p>NOTA: No se incluye costo adicional por movilidad.</p>
+        </span>
+        
+        <br><br>
+
+        <form id="forma_datos">
+            <div class="form-group">
+                <label><strong>Elige el tipo de ensayo a realizar:</strong></label>
+                <select id="tipo-general" class="form-control" onchange="mostrarEnsayosEspecificos()">
+                    <option value="0">Seleccione una opción</option>
+                    <option value="suelos">Estudio Mecánica de Suelos</option>
+                    <option value="topografia">Topografía, Geodesia</option>
+                    <option value="hidrologico">Estudio Hidrologico</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+
+            <div id="ensayos-especificos-container" class="hidden">
+                <div class="form-group">
+                    <label><strong>Selecciona el ensayo específico:</strong></label>
+                    <select id="ensayos-especificos" class="form-control" onchange="mostrarTablaParametros()">
+                        <!-- Opciones se llenarán dinámicamente -->
+                    </select>
+                </div>
+            </div>
+
+            <!-- Contenedor para las tablas de parámetros específicos -->
+            <div id="parametros-container" class="hidden">
+                <h3 id="titulo-ensayo"></h3>
+                <div class="table-responsive">
+                    <table id="tabla-parametros">
+                        <thead>
+                            <tr>
+                                <th width="40%">Descripción</th>
+                                <th width="20%">Precio unitario (S/.)</th>
+                                <th width="20%">Cantidad</th>
+                                <th width="20%">Subtotal (S/.)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Filas generadas automáticamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Formulario para "Otros" -->
+            <div id="otros-form-container" class="hidden">
+                <h3>Datos del Cliente</h3>
+                <div class="form-group">
+                    <label for="email">E-mail *</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre *</label>
+                    <input type="text" id="nombre" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="empresa">Empresa</label>
+                    <input type="text" id="empresa" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="trabajo">Trabajo a cotizar *</label>
+                    <textarea id="trabajo" class="form-control" rows="4" required></textarea>
+                </div>
+            </div>
+
+            <div class="form-group" style="text-align: right;">
+                <button type="button" class="btn btn-primary" onclick="enviarCotizacion()">Solicitar Cotización</button>
+                <button type="reset" class="btn btn-secondary" onclick="resetForm()">Limpiar Formulario</button>
+            </div>
+        </form>
+    </div>
+
+
+</body>

@@ -1,0 +1,412 @@
+.tesis {
+    padding: 1rem;
+}
+
+.tesis .repositorio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+/* Estilo mejorado para las cajas del repositorio */
+.tesis .repositorio .caja {
+    background: #900000;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(144, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Efecto hover para las cajas */
+.tesis .repositorio .caja:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(144, 0, 0, 0.15);
+    border-color: #900000;
+}
+
+/* Estilo para los enlaces */
+.tesis .repositorio .caja a {
+    color: white !important;
+    text-decoration: none !important;
+    display: block;
+    padding: 1.5rem 1rem;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+}
+
+/* Efecto hover para los enlaces */
+.tesis .repositorio .caja a:hover {
+    color: white !important;
+}
+
+/* Fondo hover animado */
+.tesis .repositorio .caja::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #900000 0%, #c00000 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tesis .repositorio .caja:hover::before {
+    opacity: 1;
+}
+
+/* Icono opcional (requiere Font Awesome) */
+.tesis .repositorio .caja a::after {
+    content: '\f08e';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    margin-left: 8px;
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #900000;
+    color: white;
+    font-weight: bold;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: #e6f7ff;
+}
+.nivel {
+    font-weight: bold;
+    width: 20%;
+}
+.contenido {
+    width: 80%;
+}
+
+
+/* Para poner los elementos en línea */
+.form-group {
+    display: flex;
+    align-items: flex-start; /* o center si quieres que estén centrados verticalmente */
+  }
+  
+  /* Estilos del label */
+  label {
+    margin-right: 10px;
+    font-weight: bold;
+    white-space: nowrap; /* evita que el texto del label se divida en dos líneas */
+  }
+  
+  /* Estilos del textarea */
+  textarea {
+    flex: 1; /* para que tome el espacio restante */
+    padding: 0px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+    min-height: 20px;
+    max-width: 50rem;
+  }
+  button {
+    background-color: #900000; /* rojo oscuro */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.enunciado {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #333;
+}
+.conector {
+    display: inline-block;
+    min-width: 30px;
+    width: auto;
+    padding: 2px 5px;
+    margin: 0 2px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    text-align: center;
+}
+.texto-fijo {
+    display: inline;
+}
+.enunciado-linea {
+    line-height: 2;
+    white-space: normal;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .tesis .repositorio .caja {
+        width: 160px;
+    }
+
+    .tesis .repositorio .caja a {
+        padding: 1.2rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .research-card {
+        width: 140px;
+        padding: 1rem 0.5rem;
+    }
+
+    .tesis .tema .tabla {
+        font-size: 0.85rem;
+    }
+
+    .tesis .tema .tabla th,
+    .tesis .tema .tabla td {
+        padding: 0.6rem 0.8rem;
+    }
+    .research-group {
+        grid-auto-columns: minmax(150px, 1fr); /* Más estrecho */
+        gap: 0rem;
+    }
+    
+    .research-card {
+       
+        padding: 0.8rem 0.5rem; /* Menos padding */
+        max-width: 15rem;
+    }
+    
+    .research-card h3 {
+        font-size: 1rem; /* Texto más pequeño */
+        margin-bottom: 0.3rem;
+    }
+    
+    .research-card p {
+        font-size: 0.8rem; /* Texto secundario más pequeño */
+    }
+
+
+}
+@media (max-width: 480px) {
+    .research-group {
+        grid-auto-columns: minmax(140px, 1fr); /* Aún más estrecho para móviles pequeños */
+    }
+}
+/* Estilo para el subtítulo */
+.section-subtitle {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 1.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #900000;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+  }
+
+
+  .research-framework {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 2rem auto;
+    max-width: 1200px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px; /* Espacio para sombras */
+}
+
+.research-group {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(180px, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+
+}
+
+.research-card {
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    min-height: 100px; /* Reducida desde 120px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+
+.research-card h3 {
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+}
+
+.research-card p {
+    font-size: 0.9rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.space {
+    background-color: #333;
+    color: white;
+
+}
+
+
+.research-statement {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    padding: 25px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    margin: 25px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    max-width: 100%;
+}
+
+.part {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin: 0 2px;
+    white-space: nowrap;
+}
+
+.independent {
+    background-color: #900000;
+    color: white;
+}
+
+.dependent {
+    background-color: #1565c0;
+    color: white;
+}
+
+.purpose {
+    background-color: #40ff00;
+    color: #000;
+}
+
+.result {
+    background-color: #333;
+    color: white;
+}
+
+.location {
+    background-color: #424242;
+    color: white;
+}
+
+.time {
+    background-color: #c2185b;
+    color: white;
+    padding: 3px 8px;
+}
+
+/* Estilo mejorado para tablas */
+.tesis .tema .tabla {
+    margin: 2rem auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 95%;
+    box-shadow: 0 4px 12px rgba(144, 0, 0, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 0.95rem;
+}
+
+/* Cabecera de tabla */
+.tesis .tema .tabla thead {
+    background: linear-gradient(135deg, #900000 0%, #c00000 100%);
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.tesis .tema .tabla th {
+    padding: 1rem 1.2rem;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Celdas */
+.tesis .tema .tabla td {
+    padding: 0.8rem 1.2rem;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: top;
+}
+
+/* Filas alternadas */
+.tesis .tema .tabla tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* Efecto hover para filas */
+.tesis .tema .tabla tbody tr:hover {
+    background-color: #fff5f5;
+    transition: background-color 0.3s ease;
+}
+
+/* Bordes redondeados */
+.tesis .tema .tabla tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.tesis .tema .tabla tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.tesis .tema .tabla tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.tesis .tema .tabla tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+/* Estilo para listas dentro de tablas */
+.tesis .tema .tabla ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.tesis .tema .tabla li {
+    margin-bottom: 0.3rem;
+    line-height: 1.4;
+}

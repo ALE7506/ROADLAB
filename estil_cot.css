@@ -1,0 +1,105 @@
+/* Estilos generales */
+.card-body {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 900px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .subtitle {
+    color: #555;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  .subtitle a {
+    color: #2c7be5;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .subtitle a:hover {
+    text-decoration: underline;
+  }
+
+  /* Estilos para el formulario */
+  .form-horizontal {
+    margin-top: 15px;
+  }
+
+  .form-group.row {
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  .form-control-label {
+    color: #344050;
+    font-weight: 600;
+    font-size: 14px;
+    padding-right: 15px;
+    text-align: right;
+  }
+
+  .form-control {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #344050;
+    background-color: #f9fafc;
+    transition: all 0.3s;
+    width: 100%;
+  }
+
+  .form-control:focus {
+    border-color: #2c7be5;
+    box-shadow: 0 0 0 0.2rem rgba(44, 123, 229, 0.25);
+    background-color: #fff;
+    outline: 0;
+  }
+
+  /* Estilos para las tablas de ensayos */
+  table-responsive {
+    margin-top: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+.form-control {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+.btn {
+    padding: 10px 15px;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+}
+.hidden {
+    display: none;
+}

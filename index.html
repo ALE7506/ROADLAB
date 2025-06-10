@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesone/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo-text">
+                <h2>ROAD - LAB</h2>
+                <p>INGENIERIA CON PRESICION</p>
+            </div>
+        </div>
+
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar" class="fa fa-bars"></label>
+
+        <nav class="navbar">
+            <a href="index.html" style="color: #FFd700">Nosotros</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="productos.html">Productos</a>
+            <a href="cursos.html">Curso/Taller</a>
+
+            <!-- Menú desplegable para Tesis -->
+            <div class="dropdown">
+                <input type="checkbox" id="tesis-submenu">
+                <label for="tesis-submenu" class="dropbtn">Investigacion(Tesis) <i class="fa fa-caret-down"></i></label>
+                <div class="dropdown-content">
+
+                    <a href="tesis_tema.html">Tema de investigacion</a>
+                    <a href="iso.html">Estilo ISO 690</a>
+                    <a href="metodo.html">Metodologia</a>
+                </div>
+            </div>
+
+        </nav>
+        <div class="contact-info">
+            <p><span class="highlight">Teléfono:</span> (123) 456-7890</p>
+            <p><span class="highlight">Email:</span> info@laboratorioxys.com</p>
+        </div>
+    </header>
+    <div class="red-bar1"></div>
+
+
+    <div class="contenedor-principal">
+        <!-- Sección Nosotros -->
+        <div class="contenido-principal">
+            <h1 class="titulo-nosotros">RED - UNI: Innovación y Excelencia en Ensayos y Capacitación</h1>
+
+            <div class="historia">
+                <p><strong>RED - UNI</strong> nació como una comunidad estudiantil enfocada en compartir recursos
+                    técnicos y crear oportunidades prácticas. Lo que comenzó como un grupo de estudiantes apasionados
+                    por la investigación se transformó rápidamente en una red activa de colaboración y aprendizaje.</p>
+
+                <p>Con el tiempo, evolucionamos hacia la creación de nuestro primer laboratorio, un espacio diseñado
+                    para realizar análisis especializados de <strong>suelos, concreto y asfalto</strong>. Este
+                    laboratorio no solo marcó un hito en nuestra historia, sino que también reforzó nuestro compromiso
+                    con el desarrollo técnico y la formación profesional. A pesar de nuestro crecimiento, hemos
+                    mantenido intacto nuestro espíritu colaborativo:</p>
+
+                <ul class="valores-lista">
+                    <li>Vinculación constante con las universidades</li>
+                    <li>Acceso abierto al conocimiento y recursos técnicos</li>
+                    <li>Apoyo en la formación de nuevas generaciones de ingenieros</li>
+                    <li>Innovación guiada por principios de responsabilidad social</li>
+                    <li>Trabajo en red con equipos multidisciplinarios</li>
+                    <li>Impulso al desarrollo sostenible en infraestructuras</li>
+                </ul>
+
+                <h2>De una idea a un impacto tangible</h2>
+                <p>Hoy, cada una de nuestras sedes regionales cuenta con los <strong>"Espacios Geolab"</strong>, centros
+                    comunitarios diseñados para ofrecer a estudiantes acceso a equipos de laboratorio, asesorías
+                    profesionales y bases de datos para sus investigaciones. Además, continuamos ampliando nuestro
+                    alcance a través de la organización del <strong>Encuentro Nacional de Jóvenes Ingenieros</strong> y
+                    la oferta de cursos especializados, manteniendo siempre nuestro compromiso con la construcción
+                    sostenible y la formación de excelencia.</p>
+            </div>
+        </div>
+
+        <!-- Sidebar de recomendaciones -->
+        <div class="sidebar-recomendaciones">
+            <h3 class="recomendacion-titulo">
+                <i class="fas fa-link"></i> Recomendaciones WEB
+            </h3>
+            <ul class="lista-recomendaciones">
+                <li class="recomendacion-item">
+                    <a href="https://recursoscad.com/" target="_blank" class="recomendacion-link">
+                        <img src="https://recursoscad.com/wp-content/uploads/2024/06/cropped-recursos-cad.png"
+                            alt="Ingeniería Real" class="recomendacion-img">
+                    </a>
+                </li>
+                <li class="recomendacion-item">
+                    <a href="https://www.cimec.org.ar" target="_blank" class="recomendacion-link">
+                        <i class="fas fa-external-link-alt"></i> CIMEC
+                    </a>
+                    <p class="recomendacion-desc">Centro de investigación de materiales de construcción</p>
+                </li>
+                <li class="recomendacion-item">
+                    <a href="https://www.asqa.org" target="_blank" class="recomendacion-link">
+                        <i class="fas fa-external-link-alt"></i> ASQA Standards
+                    </a>
+                    <p class="recomendacion-desc">Normativas internacionales de calidad</p>
+                </li>
+                <li class="recomendacion-item">
+                    <a href="https://www.constructionmentor.net" target="_blank" class="recomendacion-link">
+                        <i class="fas fa-external-link-alt"></i> Construction Mentor
+                    </a>
+                    <p class="recomendacion-desc">Plataforma de capacitación para profesionales</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <section id="contact" style="display:none;">
+        <div class="contacto-seccion">
+            <h2>Contacto</h2>
+            <p>Residencia: Jiron el triunfo,ate-vitarte, </p>
+            <a href="https://wa.me/+51930921460" class="whatsapp-link">Contactar por WhatsApp</a>
+        </div>
+    </section>
+</body>
+
+</html>
